@@ -6,7 +6,7 @@ import { Button } from '../components/Button'
 export const App: React.FC = () => {
   return (
     <View>
-      <Button />
+      <Button loading />
     </View>
   )
 }
