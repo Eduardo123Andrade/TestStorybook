@@ -1,12 +1,11 @@
-import React from 'react'
-import { View } from 'react-native'
-import { Button } from '../components/Button'
-
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { Navigator } from '../navigators/Navigator';
 
 export const App: React.FC = () => {
   return (
-    <View>
-      <Button loading />
-    </View>
+    <NavigationContainer>
+      <Navigator />
+    </NavigationContainer>
   )
 }
