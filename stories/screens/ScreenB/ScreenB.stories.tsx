@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ScreenB } from "../../../screens/ScreenB";
+import { ScreenB } from "../../../src/screens/ScreenB";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 

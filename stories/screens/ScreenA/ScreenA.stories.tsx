@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { ScreenA as Home } from "../../../screens/ScreenA";
+import { ScreenA as Home } from "../../../src/screens/ScreenA";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import '@storybook/addon-actions/register';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '../../../components/Button';
+import { Button } from '../../../src/components/Button';
 
 export default {
   title: "ScreenA",
