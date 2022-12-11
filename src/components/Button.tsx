@@ -6,19 +6,21 @@ import { ActivityIndicator, StyleSheet, Text, TouchableHighlight, TouchableHighl
 //   loading?: boolean
 // }
 
-export type ButtonProps = {
+export type ButtonProps = TouchableHighlightProps & {
   loading?: boolean
-
+  label?: string
+  onPress: () => void
 }
 
 
-// export const Button: React.FC<ButtonProps> = (props) => {
-export const Button: React.FC<ButtonProps> = ({ loading }) => {
+export const Button: React.FC<ButtonProps> = ({ loading, label = 'Button', onPress, ...props }) => {
   return (
     <TouchableHighlight
-      // {...props}
-      style={styles.container}
-      onPress={() => console.log('oi')}
+      {...props}
+      style={[styles.container, {
+        backgroundColor: props.disabled ? "#F11" : styles.container.backgroundColor
+      }]}
+      onPress={onPress}
     >
       <View>
         {loading &&
@@ -26,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({ loading }) => {
         }
         {!loading &&
           <Text>
-            Ola
+            {label}
           </Text>
         }
       </View>

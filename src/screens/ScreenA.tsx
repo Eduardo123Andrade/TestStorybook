@@ -17,7 +17,7 @@ export const ScreenA: React.FC<ScreenAProps> = (props) => {
       <Text>
         Olá mundo!
       </Text>
-      <Button />
+      <Button onPress={onPress} />
     </View>
   )
 }
