@@ -1,23 +1,23 @@
 
 import React from 'react';
-import { Button } from "../../../src/components/Button";
+import { Button as ButtonComponent } from "../../../src/components/Button";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import '@storybook/addon-actions/register';
 
 export default {
-  title: "Button",
-  component: Button,
+  title: "Buttons",
+  component: ButtonComponent,
   argTypes: {
     onPress: () => { }
   }
-} as ComponentMeta<typeof Button>
+} as ComponentMeta<typeof ButtonComponent>
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+const Template: ComponentStory<typeof ButtonComponent> = (args) => <ButtonComponent {...args} />
 
-export const Button1 = Template.bind({})
-Button1.args = {
+export const Button = Template.bind({})
+Button.args = {
   loading: false,
   disabled: false,
 }
